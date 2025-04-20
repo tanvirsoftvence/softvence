@@ -43,9 +43,9 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-4">
+      {/* <footer className="bg-gray-800 text-white text-center py-4">
         <p>&copy; {new Date().getFullYear()} Softvence. All rights reserved.</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
