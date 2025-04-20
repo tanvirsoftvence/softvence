@@ -1,51 +1,45 @@
 import React from "react";
+import JobCard from "../components/JobCard";
+
+const jobData = [
+  {
+    title: "UI/UX Designer",
+    image: "/images/cardbg.png",
+    type: "Onsite | Full Time | Entry-Level",
+    level: "Entry-Level",
+    shift: "Night Shift",
+    deadline: "30 April 2025",
+    countdown: { days: "05", hours: "09", minutes: "16" },
+  },
+  {
+    title: "Junior Product Designer",
+    image: "/images/cardbg.png",
+    type: "Onsite | Full Time | Entry-Level",
+    level: "Entry-Level",
+    shift: "Night Shift",
+    deadline: "30 April 2025",
+    countdown: { days: "05", hours: "09", minutes: "16" },
+  },
+];
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Welcome to Softvence
-          </h1>
-          <p className="text-lg text-gray-600 mb-8">
-            Build fast, modern, and beautiful apps with ease.
-          </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
-            Get Started
-          </button>
-        </div>
-      </section>
+    <div className="min-h-screen container mx-auto py-10 px-4">
+      <h2 className="text-4xl font-semibold text-gray-800 mb-6">
+        Choose your <span className="text-[#038317]">position</span> that fits you.
+      </h2>
+      <p className="text-[15px] font-semibold text-gray-700">
+        Currently following positions are open, feel free to apply any one where you are skilled and prefer to join.
+      </p>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Fast Performance</h3>
-            <p className="text-gray-600">
-              Optimized React components and Tailwind speed.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Modern UI</h3>
-            <p className="text-gray-600">
-              Clean and responsive layouts with Tailwind CSS.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Easy Routing</h3>
-            <p className="text-gray-600">
-              Use React Router for seamless page navigation.
-            </p>
-          </div>
+      <div className="mt-10">
+        <h2 className="text-2xl font-semibold mb-4">Designer Roles</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {jobData.map((job, index) => (
+            <JobCard key={index} job={job} />
+          ))}
         </div>
-      </section>
-
-      {/* Footer */}
-      {/* <footer className="bg-gray-800 text-white text-center py-4">
-        <p>&copy; {new Date().getFullYear()} Softvence. All rights reserved.</p>
-      </footer> */}
+      </div>
     </div>
   );
 };
