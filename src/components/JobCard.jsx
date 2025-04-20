@@ -12,15 +12,18 @@ const JobCard = ({ job }) => {
           className="w-full h-56 object-cover"
         />
         <div className="absolute bottom-2 right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
-          <span>{job.countdown.days}</span> Days{" "}
-          <span>{job.countdown.hours}</span> Hours{" "}
+          <span>{job.countdown.days}</span> Days
+          <span>{job.countdown.hours}</span> Hours
           <span>{job.countdown.minutes}</span> Min
+        </div>
+        <div className="py-2 px-4 bg-blur border border-gray-300 text-white text-sm font-semibold absolute top-2 left-2 rounded-full shadow-md">
+            <span>Designer</span>
         </div>
       </div>
       <div className="p-5">
         <h3 className="text-xl font-bold text-gray-800 mb-2">{job.title}</h3>
         <p className="text-sm text-gray-600 mb-2">
-          {job.type} &bull; {job.level} &bull;{" "}
+          {job.type} &bull; {job.level} &bull;
           <span className="text-black font-medium">{job.shift}</span>
         </p>
         <div className="flex items-center text-gray-600 text-sm mb-4">
