@@ -2,6 +2,7 @@
 import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
+
 const JobCard = ({ job }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden">

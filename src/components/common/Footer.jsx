@@ -5,7 +5,7 @@ import footbanner from "../../assets/BG.png";
 const Footer = () => {
   return (
     <footer
-      className="w-full py-14 h-[260px] bg-center bg-cover bg-no-repeat"
+      className="w-full py-14 h-[260px] bg-center bg-cover bg-no-repeat bg-gray-100 text-white"
       style={{
         backgroundImage: `url(${footbanner})`,
       }}
