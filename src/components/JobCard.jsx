@@ -12,7 +12,7 @@ const JobCard = ({ job }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      const deadline = new Date(job.deadline); // make sure job.deadline is a valid date string
+      const deadline = new Date(job.deadline);
       const diff = deadline - now;
 
       if (diff <= 0) {
