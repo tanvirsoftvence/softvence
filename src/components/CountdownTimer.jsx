@@ -1,3 +1,4 @@
+// components/CountdownTimer.jsx
 import React from "react";
 import Countdown from "react-countdown";
 
@@ -12,7 +13,7 @@ const CountdownTimer = ({ deadline }) => {
 
         return (
           <span>
-            {days}d {hours}h {minutes}m {seconds}s
+            {days}D {hours}H {minutes}M {seconds}S
           </span>
         );
       }}

@@ -13,13 +13,15 @@ const JobCard = ({ job }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden w-[362px]">
       <div className="relative">
-        <img
-          src={job.image}
-          alt={job.title}
-          className="w-full h-52 object-cover"
-        />
-        <div className="absolute bottom-2 right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
-          <CountdownTimer deadline={job.deadlineDate} />
+        <div className="relative">
+          <img
+            src={job.image}
+            alt={job.title}
+            className="w-full h-52 object-cover"
+          />
+          <div className="absolute bottom-[10px] right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
+            <CountdownTimer deadline={job.deadlineDate} />
+          </div>
         </div>
         <div className="py-2 px-4 backdrop-blur-sm bg-white/30 border border-gray-300 text-white text-sm font-semibold absolute top-2 left-2 rounded-full shadow-md">
           <span className="font-pop font-normal text-[16px]">Designer</span>
@@ -27,17 +29,22 @@ const JobCard = ({ job }) => {
       </div>
 
       <div className="p-4">
-        <h3 className="text-[24px] font-medium font-pop text-[#121212] mb-2">{job.title}</h3>
+        <h3 className="text-[24px] font-medium font-pop text-[#121212] mb-2">
+          {job.title}
+        </h3>
         <p className="text-[14px] text-[#837E7E] font-normal font-pop mb-2">
           {job.type} | {job.level} |
-          <span className="text-[#151515] text-[14px] font-pop font-medium"> {job.shift}</span>
+          <span className="text-[#151515] text-[14px] font-pop font-medium">
+            {" "}
+            {job.shift}
+          </span>
         </p>
         <div className="flex items-center text-sm mb-4 gap-1 text-[14px] text-[#837E7E] font-normal font-pop">
           <img src={date} alt="" />
           Deadline: <span className="ml-1 font-normal">{job.deadline}</span>
         </div>
         <div className="flex justify-between items-center">
-          <p 
+          <p
             onClick={handleJobClick}
             className="text-green-700 font-medium underline hover:text-green-900 cursor-pointer"
           >
