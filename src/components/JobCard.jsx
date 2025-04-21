@@ -13,22 +13,23 @@ const JobCard = ({ job }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden w-[362px]">
       <div className="relative">
-        <div className="relative">
+        <div className="">
           <img
             src={job.image}
             alt={job.title}
             className="w-full h-52 object-cover"
           />
-          <div className="absolute bottom-[-16px] right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
-            <CountdownTimer deadline={job.deadlineDate} />
-          </div>
+        
         </div>
         <div className="py-2 px-4 backdrop-blur-sm bg-white/30 border border-gray-300 text-white text-sm font-semibold absolute top-2 left-2 rounded-full shadow-md">
           <span className="font-pop font-normal text-[16px]">Designer</span>
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-5 relative bg-[#F6FFF8]">
+      <div className="absolute bottom-[166px] right-2 bg-[#F6FFF8] px-3 py-1 rounded-lg text-sm text-green-600 font-semibold">
+            <CountdownTimer deadline={job.deadlineDate} />
+          </div>
         <h3 className="text-[24px] font-medium font-pop text-[#121212] mb-2">
           {job.title}
         </h3>

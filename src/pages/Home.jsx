@@ -13,12 +13,13 @@ const Home = () => {
     job.title.toLowerCase().includes("designer")
   );
 
-  const developerJobs = allJobs.filter((job) =>
-    job.title.toLowerCase().includes("developer") ||
-    job.title.toLowerCase().includes("front end") ||
-    job.title.toLowerCase().includes("django") ||
-    job.title.toLowerCase().includes("flutter") ||
-    job.title.toLowerCase().includes("laravel")
+  const developerJobs = allJobs.filter(
+    (job) =>
+      job.title.toLowerCase().includes("developer") ||
+      job.title.toLowerCase().includes("front end") ||
+      job.title.toLowerCase().includes("django") ||
+      job.title.toLowerCase().includes("flutter") ||
+      job.title.toLowerCase().includes("laravel")
   );
   const swiperRef = useRef(null);
 
@@ -26,7 +27,8 @@ const Home = () => {
     <div className="min-h-screen container mx-auto py-10 px-4 mt-[100px]">
       {/* Title */}
       <h2 className="text-[48px] font-semibold text-[#121212] mb-6 font-pop">
-        Choose your <span className="text-[#038317]">position</span> that fits you.
+        Choose your <span className="text-[#038317]">position</span> that fits
+        you.
       </h2>
       <p className="text-[16px] font-normal text-[#474747] font-pop">
         Currently following positions are open, feel free to apply any one where
@@ -78,10 +80,10 @@ const Home = () => {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          className="pb-4"
+          className="py-10"
         >
           {developerJobs.map((job, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="py-10">
               <JobCard job={job} />
             </SwiperSlide>
           ))}
