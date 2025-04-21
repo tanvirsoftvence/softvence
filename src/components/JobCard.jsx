@@ -3,7 +3,7 @@ import React from "react";
 import CountdownTimer from "./CountdownTimer";
 import arrow from "../assets/arrow.png";
 import date from "../assets/date.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const JobCard = ({ job }) => {
   const navigate = useNavigate();
