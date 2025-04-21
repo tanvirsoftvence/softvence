@@ -40,11 +40,25 @@ const Home = () => {
         <h2 className="text-[32px] font-pop font-semibold mb-4">
           Designer Roles
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-6">
+        <Swiper
+          modules={[Navigation]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          className="py-10"
+        >
           {designerJobs.map((job, index) => (
-            <JobCard key={index} job={job} />
+            <SwiperSlide key={index} className="py-10">
+              <JobCard job={job} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
 
       {/* Developer Roles */}
