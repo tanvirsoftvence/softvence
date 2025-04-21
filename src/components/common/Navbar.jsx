@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 const Navbar = () => {
   return (
-    <nav className="w-full shadow-md bg-white">
+    <nav className="w-full shadow-md bg-white fixed top-0 z-10">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
@@ -10,7 +10,7 @@ const Navbar = () => {
         </div>
 
         {/* Right button */}
-        <button className="bg-[#038317] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+        <button className="text-[16px] bg-[#038317] text-white px-4 py-2 rounded-lg hover:bg-[#40854a] transition font-pop font-semibold">
           View all roles
         </button>
       </div>
