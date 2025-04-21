@@ -19,7 +19,7 @@ const JobCard = ({ job }) => {
             alt={job.title}
             className="w-full h-52 object-cover"
           />
-          <div className="absolute bottom-[10px] right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
+          <div className="absolute bottom-[-16px] right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
             <CountdownTimer deadline={job.deadlineDate} />
           </div>
         </div>
