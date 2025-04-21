@@ -8,18 +8,20 @@ import "swiper/css/navigation";
 
 const jobData = [
   {
+    id : 1,
     title: "UI/UX Designer",
     image: "/images/cardbg.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time ",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
     deadlineDate: "2025-04-25T23:59:59",
   },
   {
+    id: 2,
     title: "Junior Product Designer",
     image: "/images/cardbg.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time ",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
@@ -29,45 +31,50 @@ const jobData = [
 
 const jobDataTwo = [
   {
+    id: 1,
     title: "Flutter Developer",
     image: "/images/cardf.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time ",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
     deadlineDate: "2025-04-25T23:59:59",
   },
   {
+    id: 2,
     title: "Laravel Developer",
     image: "/images/lara.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time ",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
     deadlineDate: "2025-04-30T23:59:59",
   },
   {
+    id: 3,
     title: "Front End Development",
     image: "/images/html.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time ",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
     deadlineDate: "2025-04-30T23:59:59",
   },
   {
+    id: 4,
     title: "Python Django Developer",
     image: "/images/jango.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
     deadlineDate: "2025-04-30T23:59:59",
   },
   {
+    id: 5,
     title: "Front End Development2",
     image: "/images/html.png",
-    type: "Onsite | Full Time | Entry-Level",
+    type: "Onsite | Full Time",
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
@@ -94,7 +101,7 @@ const Home = () => {
         <h2 className="text-[32px] font-pop font-semibold mb-4">
           Designer Roles
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[180px]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-6">
           {jobData.map((job, index) => (
             <JobCard key={index} job={job} />
           ))}

@@ -8,8 +8,12 @@ export default {
     fontFamily: {
       'pop': ["Poppins", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'job': "url('/images/jobs.png')",
+    },
   },
   plugins: [],
+}
 }
 
