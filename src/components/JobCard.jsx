@@ -3,9 +3,13 @@ import React from "react";
 import CountdownTimer from "./CountdownTimer";
 import arrow from "../assets/arrow.png";
 import date from "../assets/date.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const JobCard = ({ job }) => {
+  const navigate = useNavigate();
+  const handleJobClick = () => {
+    navigate(`/job/${job.id}`, { state: { job } });
+  };
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden w-[362px]">
       <div className="relative">
@@ -33,13 +37,12 @@ const JobCard = ({ job }) => {
           Deadline: <span className="ml-1 font-normal">{job.deadline}</span>
         </div>
         <div className="flex justify-between items-center">
-          <Link
-            to={`/job/${job.id}`}
-            state={{ job }}
-            className="text-green-700 font-medium underline hover:text-green-900"
+          <p 
+            onClick={handleJobClick}
+            className="text-green-700 font-medium underline hover:text-green-900 cursor-pointer"
           >
             View Details
-          </Link>
+          </p>
           <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 flex gap-2">
             Apply Now <img src={arrow} alt="arrow" />
           </button>

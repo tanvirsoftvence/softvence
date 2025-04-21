@@ -1,16 +1,20 @@
 import React from 'react'
-
+import { useParams } from 'react-router-dom'
+import { useJobs } from '../context/JobContext'
 const JobCircular = ({job}) => {
-
-  console.log(job)
-
+  const { id } = useParams()
+  const { allJobs} = useJobs()
+  const jobData = allJobs.find((job) => job.id === parseInt(id));
+  if (!jobData) {
+    return <div>Job not found</div>;
+  }
   return (
     <>
     <section className='mt-[70px] bg-no-repeat bg-job bg-cover bg-center  h-full w-full pt-[190px] pb-[130px]'>
         <div className="container mx-auto">
         <div className="">
           <p className='text-[#ffff] font-pop font-normal text-[16px] mb-4'>Developer</p>
-          <h2 className='font-pop font-medium text-[40px] text-[#ffff] mb-2'>Front End Development</h2>
+          <h2 className='font-pop font-medium text-[40px] text-[#ffff] mb-2'>{jobData.title}</h2>
           <p className='font-pop font-semibold text-[24px] text-[#ffff]'>25,000 - 90,0000 <span className='font-pop font-medium text-[10px] text-[#C8C8C8]'>BDT/Month</span> </p>
         </div>
         <div className="flex items-center space-x-[110px] mt-[40px]">
