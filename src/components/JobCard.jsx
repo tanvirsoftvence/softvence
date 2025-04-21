@@ -1,37 +1,9 @@
-import React, { useEffect, useState } from "react";
+// components/JobCard.jsx
+import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import CountdownTimer from "./CountdownTimer";
 
 const JobCard = ({ job }) => {
-  const [countdown, setCountdown] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const deadline = new Date(job.deadline);
-      const diff = deadline - now;
-
-      if (diff <= 0) {
-        clearInterval(interval);
-        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      setCountdown({ days, hours, minutes, seconds });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [job.deadline]);
-
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
       <div className="relative">
@@ -40,16 +12,16 @@ const JobCard = ({ job }) => {
           alt={job.title}
           className="w-full h-56 object-cover"
         />
+        {/* Countdown Timer */}
         <div className="absolute bottom-2 right-2 bg-white px-3 py-1 rounded-lg text-sm text-green-600 font-semibold shadow-md">
-          <span>{countdown.days}d </span>
-          <span>{countdown.hours}h </span>
-          <span>{countdown.minutes}m </span>
-          <span>{countdown.seconds}s</span>
+          <CountdownTimer deadline={job.deadlineDate} />
         </div>
-        <div className="py-2 px-4 bg-blur border border-gray-300 text-white text-sm font-semibold absolute top-2 left-2 rounded-full shadow-md">
+        {/* Tag */}
+        <div className="py-2 px-4 backdrop-blur-sm bg-white/30 border border-gray-300 text-white text-sm font-semibold absolute top-2 left-2 rounded-full shadow-md">
           <span>Designer</span>
         </div>
       </div>
+
       <div className="p-5">
         <h3 className="text-xl font-bold text-gray-800 mb-2">{job.title}</h3>
         <p className="text-sm text-gray-600 mb-2">

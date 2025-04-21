@@ -1,3 +1,4 @@
+// pages/Home.jsx
 import React from "react";
 import JobCard from "../components/JobCard";
 
@@ -9,7 +10,7 @@ const jobData = [
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
-    countdown: { days: "05", hours: "09", minutes: "16" },
+    deadlineDate: "2025-04-25T23:59:59",
   },
   {
     title: "Junior Product Designer",
@@ -18,7 +19,7 @@ const jobData = [
     level: "Entry-Level",
     shift: "Night Shift",
     deadline: "30 April 2025",
-    countdown: { days: "05", hours: "09", minutes: "16" },
+    deadlineDate: "2025-04-30T23:59:59",
   },
 ];
 
