@@ -3,6 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import footbanner from "../../assets/BG.png";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer
       className="w-full py-14 h-[260px] bg-center bg-cover bg-no-repeat bg-gray-100 text-white"
@@ -15,13 +16,13 @@ const Footer = () => {
         <div className="mb-6">
           <ul className="flex justify-center space-x-8 text-black font-medium">
             <li>
-              <a href="/" className="hover:text-blue-500">Home</a>
+              <a href="/" className="hover:text-green-700">Home</a>
             </li>
             <li>
-              <a href="/career" className="hover:text-blue-500">Careers</a>
+              <a href="/career" className="hover:text-green-700">Careers</a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-blue-500">Privacy</a>
+              <a href="/privacy" className="hover:text-green-700">Privacy</a>
             </li>
           </ul>
         </div>
@@ -44,7 +45,7 @@ const Footer = () => {
 
         {/* Footer Bottom Text */}
         <div className="mt-6 text-sm text-gray-700">
-          <p>© 2025 Softvence. All rights reserved.</p>
+          <p>© {currentYear} Softvence. All rights reserved.</p>
         </div>
       </div>
     </footer>

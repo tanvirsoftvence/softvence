@@ -1,4 +1,3 @@
-// src/context/JobContext.jsx
 import { createContext, useContext } from "react";
 
 const JobContext = createContext();
